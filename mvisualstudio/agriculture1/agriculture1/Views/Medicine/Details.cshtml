@@ -1,0 +1,35 @@
+﻿@model agriculture1.Models.Entity.medicine
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>medicine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.medname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medprice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.medıd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

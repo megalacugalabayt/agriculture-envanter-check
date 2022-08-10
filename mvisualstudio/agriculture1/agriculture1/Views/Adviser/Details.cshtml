@@ -1,0 +1,51 @@
+﻿@model agriculture1.Models.Entity.adviser
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>adviser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.advisername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advisername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advisersurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advisersurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adviseraddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adviseraddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.advisercomment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.advisercomment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

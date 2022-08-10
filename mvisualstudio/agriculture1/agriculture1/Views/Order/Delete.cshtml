@@ -1,0 +1,73 @@
+﻿@model agriculture1.Models.Entity.orders
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ordercusname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordercusname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ordercussurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordercussurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ordermedname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordermedname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderdealername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderdealername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderadvisername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderadvisername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ordernumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordernumber)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

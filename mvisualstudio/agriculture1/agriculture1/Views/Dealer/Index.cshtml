@@ -1,0 +1,59 @@
+﻿@model IEnumerable<agriculture1.Models.Entity.dealerr>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #eeeee4;
+    }
+</style>
+
+<h2>DEALERS</h2>
+<br>
+
+<table style="background-color: #faedd8;   border-width:10px" class="table table-bordered">
+    <tr>
+
+        <th>DEALER NAME</th>
+        <th>DEALER ADDRESS </th>
+        <th>DEALER PHONE </th>
+        <th>DEALER ADVISER </th>
+        <th>EDIT BUTTON</th>
+        <th>READ BUTTON</th>
+        <th>DELETE BUTTON</th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dealername)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dealeraddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dealerphone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dealeradviser)
+                </td>
+                <td>
+                    <center><h3>  <a href="/Dealer/Edit/@item.dealerıd" class="bi bi-pencil-square"></a>       </h3> </center>
+                </td>
+                <td>
+                    <center><h3>   <a href="/Dealer/Details/@item.dealerıd" class="bi bi-info-circle"></a>    </h3> </center>
+                </td>
+                <td>
+                    <center><h3>   <a href="/Dealer/Delete/@item.dealerıd" class="bi bi-trash3"></a>     </h3> </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    @Html.ActionLink("Add New Dealer", "Create")
+</p>

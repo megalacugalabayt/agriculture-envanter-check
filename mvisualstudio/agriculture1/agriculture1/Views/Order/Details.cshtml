@@ -1,0 +1,67 @@
+﻿@model agriculture1.Models.Entity.orders
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ordercusname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordercusname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ordercussurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordercussurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ordermedname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordermedname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderdealername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderdealername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderadvisername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderadvisername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ordernumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ordernumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.orderıd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

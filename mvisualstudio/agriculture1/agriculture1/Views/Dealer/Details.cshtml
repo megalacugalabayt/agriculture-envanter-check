@@ -1,0 +1,51 @@
+﻿@model agriculture1.Models.Entity.dealerr
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>dealerr</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dealername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dealername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dealeraddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dealeraddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dealerphone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dealerphone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dealeradviser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dealeradviser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dealerıd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
